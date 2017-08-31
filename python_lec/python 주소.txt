@@ -1,0 +1,7 @@
+www.python.org
+
+쉘에서 모듈 임포트 방법
+from RPi.GPIO import *
+
+임포트된 모듈 확인
+dir()
