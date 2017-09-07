@@ -1,0 +1,6 @@
+sudo nano /etc/network/interfaces
+
+iface wlan0 inet static
+address ip
+gateway 192.168.0.1
+netmask 255.255.255.0

@@ -1,0 +1,2 @@
+import Adafruit_DHT
+

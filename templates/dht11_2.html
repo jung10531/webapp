@@ -1,0 +1,28 @@
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type = "text/javascript">
+var tem;
+var time;
+function dht11(){
+	$.ajax(
+		{
+			type:"GET",
+			url: "/ajax",
+			async:false,
+			dataType:"json",
+			success:function(data){
+				tem = data.temperature; 
+				time = data.current_time;
+			}
+		});
+	document.frm.result.value= time + ' -> 현재 온도 : ' + tem;
+}
+setInterval(dht11, 3000);
+</script>
+</head>
+<body>
+<form name='frm'>
+<input type='text' size='50' name='result'>
+</form>
+</html>
